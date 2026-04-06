@@ -1,0 +1,22 @@
+<sites>
+    <site>
+        <id>1</id>
+        <name>Alibaba</name>
+        <url>www.taobao.com</url>
+        <likes>111</likes>
+    </site>
+ 
+    <site>
+        <id>2</id>
+        <name>Tencent</name>
+        <url>www.qq.com</url>
+        <likes>222</likes>
+    </site>
+ 
+    <site>
+        <id>3</id>
+        <name>ByteDance</name>
+        <url>www.bytedance.com</url>
+        <likes>333</likes>
+    </site>
+</sites>
