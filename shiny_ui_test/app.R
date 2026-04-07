@@ -19,14 +19,6 @@ ui = page_sidebar(
     )
 )
 
-#ui = page_fluid(
-#    title = "Test App",
-#    layout_sidebar(
-#        sidebar = sidebar("侧边栏"),
-#        "Main Contents"
-#    )
-#)
-
 # Define server logic ----
 server = function(input, output) {}
 

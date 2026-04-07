@@ -1,10 +1,10 @@
 library(shiny)
 library(bslib)
 
-# 1: Define UI for app that draws a histogram ----
-ui = page_sidebar(
+# Define UI for app that draws a histogram ----
+ui <- page_sidebar(
     # App title ----
-    title = "Hello World!",
+    title = "Hello Shiny!",
     # Sidebar panel for inputs ----
     sidebar = sidebar(
         # Input: Slider for the number of bins ----
@@ -13,15 +13,15 @@ ui = page_sidebar(
             label = "Number of bins:",
             min = 1,
             max = 50,
-            value = 10
+            value = 30
         )
     ),
     # Output: Histogram ----
     plotOutput(outputId = "distPlot")
 )
 
-# 2: Define server logic required to draw a histogram ----
-server = function(input, output) {
+# Define server logic required to draw a histogram ----
+server <- function(input, output) {
     
     # Histogram of the Old Faithful Geyser Data ----
     # with requested number of bins
@@ -31,17 +31,17 @@ server = function(input, output) {
     # 1. It is "reactive" and therefore should be automatically
     #    re-executed when inputs (input$bins) change
     # 2. Its output type is a plot
-    output$distPlot = renderPlot({
+    output$distPlot <- renderPlot({
         
-        x    = faithful$waiting
-        bins = seq(min(x), max(x), length.out = input$bins + 1)
+        x    <- faithful$waiting
+        bins <- seq(min(x), max(x), length.out = input$bins + 1)
         
-        hist(x, breaks = bins, col = "green", border = "red",
+        hist(x, breaks = bins, col = "#007bc2", border = "white",
              xlab = "Waiting time to next eruption (in mins)",
              main = "Histogram of waiting times")
         
     })
+    
 }
 
-# 3: a call to the shinyApp function
 shinyApp(ui = ui, server = server)

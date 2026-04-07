@@ -7,8 +7,9 @@ any(grepl("bslib", installed.packages())) #TRUE
 
 # 载入包
 library(shiny)
+library(bslib)
 
-# 查看官方提供的示例1
+# 查看官方提供的示例 display.mode: normal(默认值，页面不显示代码)，而showcase会显示代码
 #runExample("01_hello", display.mode = "showcase")      # a histogram
 #runExample("02_text", display.mode = "showcase")       # tables and data frames
 #runExample("03_reactivity", display.mode = "showcase") # a reactive expression
@@ -22,7 +23,7 @@ library(shiny)
 #runExample("11_timer", display.mode = "showcase")      # an automated timer
 
 # 运行本地web应用
-#运行方式1: 运行以下的代码
-#runApp("1_hello", display.mode = "normal") #"01_hello"是目录的名字
-#  display.mode: normal(默认值，页面不显示代码)，而showcase会显示代码
+#运行方式1: 在Console运行以下的代码
+#runApp("shiny_welcome") #shiny_welcome是目录的名字
+
 #运行方式2: 打开app.R文件，然后Ctrl+Shift+Enter
