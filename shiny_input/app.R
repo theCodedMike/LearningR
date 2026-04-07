@@ -11,11 +11,11 @@ ui = page_fluid(
             submitButton("Submit")
         ),
         card(
-            card_header("开关"),
+            card_header("复选框"),
             checkboxInput("checkbox", "Choice A", value = TRUE)
         ),
         card(
-            card_header("多选开关"),
+            card_header("多选复选框"),
             checkboxGroupInput("check_group", "Select all that apply:",
                 choices = list("Choice 1" = 1, "Choice 2" = 2, "Choice 3" = 3),
                 selected = 1
